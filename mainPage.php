@@ -19,12 +19,12 @@
         <b style="font-family:Gill Sans; font-size:20px;">Hi, visitor! Press one of the following buttons to looking for the Olympic information you wanted!</b> 
         <br /><br />
         
-        <form method="GET" action="livePlatform.php">
+        <form method="GET" action="https://www.students.cs.ubc.ca/~lzy0606/livePlatform.php">
         <p>Learn about the informmation of the LivePlatform, please press:&nbsp; 
             <input style="font-family:Gill Sans; font-size:18px;" type="submit" value="Live Platform" name="LivePlatform"></p>
         </form>
 
-        <form method="GET" action="updateMedal.php">
+        <form method="GET" action="https://www.students.cs.ubc.ca/~lzy0606/updateMedal.php">
         <p>Update the athletes' medals, please press:&nbsp; 
             <input style="font-family:Gill Sans; font-size:18px;" type="submit" value="Update Medals" name="UpdateMedals"></p>
         </form>
