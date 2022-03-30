@@ -19,7 +19,10 @@
         <b style="font-family:Gill Sans; font-size:20px;">Hi, visitor! Press one of the following buttons to looking for the Olympic information you wanted!</b> 
         <br /><br />
         
-         
+         <form method="GET" action="https://www.students.cs.ubc.ca/~xnie0204/128.php">
+        <p>Learn about the informmation of the Volunteer, please press:&nbsp; 
+            <input style="font-family:Gill Sans; font-size:18px;" type="submit" value="Volunteer" name="Volunteer"></p>
+        </form>
         
         <form method="GET" action="https://www.students.cs.ubc.ca/~lzy0606/livePlatform.php">
         <p>Learn about the informmation of the LivePlatform, please press:&nbsp; 
