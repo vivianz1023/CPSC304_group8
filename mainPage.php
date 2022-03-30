@@ -29,6 +29,20 @@
             <input style="font-family:Gill Sans; font-size:18px;" type="submit" value="Update Medals" name="UpdateMedals"></p>
         </form>
 
+
+
+        <p>Get information of Athletes, please press:&nbsp;
+            <a href="https://www.students.cs.ubc.ca/~yzhu33/NO456.php">
+                <button style="font-family:Gill Sans; font-size:18px;">Athlete</button>
+            </a>
+        </p>
+
+        <p>Find Max Amount of Money Support by the Sponsor, please press:&nbsp;
+            <a href="https://www.students.cs.ubc.ca/~yzhu33/NO7.php">
+                <button style="font-family:Gill Sans; font-size:18px;">Sponsor</button>
+            </a>
+        </p>
+
     </body>
 
 
