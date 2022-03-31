@@ -1,49 +1,65 @@
 <html>
 <head>
-    <title>CPSC 304 PHP/Oracle Demonstration</title>
+    <title>Athlete Information</title>
+    <style>
+        body {
+            background-image: url("mainBG.png");
+            background-repeat: no-repeat, repeat;
+            margin: 30px 30px;
+        }
+        p {font-family:Gill Sans; font-size:20px;}
+    </style>
+
+
+
+
 </head>
 
 <body>
 
-<h2>select athletes from a country</h2>
-<form method="POST" action="NO456.php">
-    <input type="hidden" id="selectQueryRequest" name="selectQueryRequest">
-    Country Name: <input type="text" name="countryName"> <br /><br />
+<b style="font-family:cursive; font-size:60px">Athlete Information</b>
+<br /><br /><br />
+<b style="font-family:Gill Sans; font-size:20px;">Hi, visitor! Press one of the following buttons to look for the Athlete information you wanted!</b>
+<br /><br />
 
-    <input type="submit" value="Select" name="selectSubmit"></p>
+<h2>Select Athletes from a Country</h2>
+<form method="POST" action="NO456.php">
+    <input style="font-family:Gill Sans; font-size:18px;" type="hidden" id="selectQueryRequest" name="selectQueryRequest">
+    <p> Country Name:&nbsp;
+        <input style="font-family:Gill Sans; font-size:18px;" type="text" name="countryName"></p>
+    <input style="font-family:Gill Sans; font-size:18px;" type="submit" value="Submit" name="selectSubmit"></p>
 </form>
 
-<hr />
 
-<h2>find competitions that each athlete participates</h2>
+
+<h2>Find All Competitions that each Athlete Participates in</h2>
 
 
 <form method="GET" action="NO456.php">
     <input type="hidden" id="joinQueryRequest" name="joinQueryRequest">
-    <input type="submit" value="join" name="joinSubmit"></p>
+    <input style="font-family:Gill Sans; font-size:18px;" type="submit" value="Submit" name="joinSubmit"></p>
 </form>
 
-<hr />
 
-<h2>find the number of specific medals with athlete names in a selected country</h2>
+
+<h2>Find the Number of Specific Medals with Athlete Names in a Selected Country</h2>
 <form method="POST" action="NO456.php">
     <input type="hidden" id="projectionQueryRequest" name="projectionQueryRequest">
-    Country Name: <input type="text" name="countryName"> <br /><br />
-    Medal Type:
-    <select id="medal" name="medal">
-        <option value=' '>  </option>
+    <p> Country Name: <input style="font-family:Gill Sans; font-size:18px;" type="text" name="countryName"></p>
+    <p>Medal Type:
+    <select style="font-family:Gill Sans; font-size:18px;" id="medal" name="medal">
         <option value='Gold'>Gold Medal</option>
         <option value='Silver'>Silver Medal</option>
         <option value='Bronze'>Bronze Medal</option>
     </select>
-    <input type="submit" value="projection" name="projectionSubmit"></p>
+    <input style="font-family:Gill Sans; font-size:18px;" type="submit" value="Submit" name="projectionSubmit"></p>
 </form>
 
-<p>Back to Home, please press:&nbsp;
+
     <a href="https://www.students.cs.ubc.ca/~lzy0606/mainPage.php">
-        <button style="font-family:Gill Sans; font-size:18px;">Home</button>
+        <button style="font-family:Gill Sans; font-size:18px;">Back</button>
     </a>
-</p>
+
 
 
 <?php
@@ -120,31 +136,38 @@ See the sample code below for how this function is used */
         }
     }
 }
+
+
 function printAthlete_Country($result) {
-    echo "<br> Athlete Names <br>";
+    echo "<br><br>";
+
+    echo "<p style='font-size: 20px; font-family:Gill Sans;background-color:lightskyblue; border: 2px solid #ddd; padding: 6px;line-height:40px; display:inline-block;'>Athlete Names</p>";
     echo "<table>";
     echo "<tr>
-          <th>Name</th>
+          <th><p style='font-size: 18px; font-family:Gill Sans;'>Name</p></th>
           <tr>";
 
     While ($row = OCI_Fetch_Array($result, OCI_BOTH)) {
-        echo "<tr><td>" . $row[0] . "</td></tr>";
+        echo "<tr><td><p style ='font:18px Gill Sans;font-size:20px;'>" . $row[0] . "</p></td></tr>";
     }
 
     echo "</table>";
+
 }
 
 function printAthlete_Competition($result) {
-    echo "<br> All Athletes and their Competitions: <br>";
+    echo "<br> <br>";
+    echo "<p style='font-size: 20px; font-family:Gill Sans;background-color:lightskyblue;border: 2px solid #ddd; padding: 6px;line-height:40px; display:inline-block;'>All Athletes and their Competitions</p>";
+
     echo "<table>";
     echo "<tr>
-          <th>Athlete</th>
-          <th>Competition Event</th> 
+          <th><p style='font-size: 18px; font-family:Gill Sans;'>Athlete</p></th>
+          <th><p style='font-size: 18px; font-family:Gill Sans;'>Competition Event</p></th>
           <tr>";
 
     While ($row = OCI_Fetch_Array($result, OCI_BOTH)) {
-        echo "<tr><td>" . $row[0] . "</td>
-                  <td>" . $row[1] . "</td></tr>";
+        echo "<tr><td><p style ='font:18px Gill Sans;font-size:20px;'>" . $row[0] . "</p></td>
+                  <td><p style ='font:18px Gill Sans;font-size:20px;'>" . $row[1] . "</p></td></tr>";
     }
 
     echo "</table>";
@@ -152,16 +175,17 @@ function printAthlete_Competition($result) {
 
 
 function printAthlete_Medal($result) {
-    echo "<br> Athletes and their Medal Number: <br>";
+    echo "<br> <br>";
+    echo "<p style='font-size: 20px; font-family:Gill Sans;background-color:lightskyblue;border: 2px solid #ddd; padding: 6px;line-height:40px; display:inline-block;'>Athletes and their Medal Counts</p>";
     echo "<table>";
     echo "<tr>
-          <th>Athlete</th>
-          <th>Medal Number</th> 
+          <th><p style='font-size: 18px; font-family:Gill Sans;'>Athlete</p></th>
+          <th><p style='font-size: 18px; font-family:Gill Sans;'>Medal Counts</p></th>
           <tr>";
 
     While ($row = OCI_Fetch_Array($result, OCI_BOTH)) {
-        echo "<tr><td>" . $row[0] . "</td>
-                  <td>" . $row[1] . "</td></tr>";
+        echo "<tr><td><p style ='font:18px Gill Sans;font-size:20px;'>" . $row[0] . "</p></td>
+                  <td><p style ='font:18px Gill Sans;font-size:20px;'>" . $row[1] . "</p></td></tr>";
     }
 
     echo "</table>";
@@ -197,10 +221,24 @@ function disconnectFromDB() {
 function handleSelectRequest() {
     global $db_conn;
     $country = $_POST['countryName'];
-    $result = executePlainSQL("SELECT DISTINCT SN.Name FROM OlympicTeamMember_Sponsor OTMS, SinNumOrEqual_Name SN, Athlete A WHERE OTMS.ID = A.ID and OTMS.SinNumOrEqual = SN.SinNumOrEqual and OTMS.Country='" . $country . "'");
-    printAthlete_Country($result);
+    $check = executePlainSQL("SELECT OTMS.Country 
+                                     FROM OlympicTeamMember_Sponsor OTMS, Athlete A
+                                     WHERE OTMS.ID = A.ID AND OTMS.Country = '". $country ."'");
+    if (OCI_Fetch_Array($check,OCI_BOTH)[0] == NULL){
+        echo "<br> <br>";
+        echo "<font color='red' face='Bradley Hand' size='5'><br />&nbsp; Invalid Country Name. No Relative Information!</font>";
+    } else {
+        $result = executePlainSQL("SELECT DISTINCT SN.Name FROM OlympicTeamMember_Sponsor OTMS, SinNumOrEqual_Name SN, Athlete A WHERE OTMS.ID = A.ID and OTMS.SinNumOrEqual = SN.SinNumOrEqual and OTMS.Country='" . $country . "'");
+        if ($result != false) {
+            printAthlete_Country($result);
+        }
+    }
     OCICommit($db_conn);
 }
+
+
+
+
 
 //JOIN
 function handleJoinQueryRequest() {
@@ -223,21 +261,37 @@ function handleProjectionQueryRequest() {
     global $db_conn;
     $country = $_POST['countryName'];
     $medal = $_POST['medal'];
-    if ($medal == "Gold") {
-        $result = executePlainSQL("SELECT SN.Name, A.GoldNumber
+    $check = executePlainSQL("SELECT OTMS.Country 
+                                     FROM OlympicTeamMember_Sponsor OTMS, Athlete A
+                                     WHERE OTMS.ID = A.ID AND OTMS.Country = '". $country ."'");
+    if (OCI_Fetch_Array($check,OCI_BOTH)[0] == NULL){
+        echo "<br> <br>";
+        echo "<font color='red' face='Bradley Hand' size='5'><br />&nbsp; Invalid Country Name. No Relative Information!</font>";
+    } else {
+        if ($medal == "Gold") {
+            $result = executePlainSQL("SELECT SN.Name, A.GoldNumber
                                       FROM Athlete A, OlympicTeamMember_Sponsor OTMS, SinNumOrEqual_Name SN
                                       WHERE A.ID = OTMS.ID AND OTMS.SinNumOrEqual = SN.SinNumOrEqual AND OTMS.Country = '" . $country . "'");
-    } elseif ($medal == "Silver") {
-        $result = executePlainSQL("SELECT SN.Name, A.SilverNumber
+        } elseif ($medal == "Silver") {
+            $result = executePlainSQL("SELECT SN.Name, A.SilverNumber
                                       FROM Athlete A, OlympicTeamMember_Sponsor OTMS, SinNumOrEqual_Name SN
                                       WHERE A.ID = OTMS.ID AND OTMS.SinNumOrEqual = SN.SinNumOrEqual AND OTMS.Country = '" . $country . "'");
-    } else{
-        $result = executePlainSQL("SELECT SN.Name, A.BronzeNumber
+        } else{
+            $result = executePlainSQL("SELECT SN.Name, A.BronzeNumber
                                       FROM Athlete A, OlympicTeamMember_Sponsor OTMS, SinNumOrEqual_Name SN
                                       WHERE A.ID = OTMS.ID AND OTMS.SinNumOrEqual = SN.SinNumOrEqual AND OTMS.Country = '" . $country . "'");
+        }
+        if ($result != false) {
+            printAthlete_Medal($result);
+        }
     }
 
-    printAthlete_Medal($result);
+//    $result = executePlainSQL("SELECT DISTINCT SN.Name FROM OlympicTeamMember_Sponsor OTMS, SinNumOrEqual_Name SN, Athlete A WHERE OTMS.ID = A.ID and OTMS.SinNumOrEqual = SN.SinNumOrEqual and OTMS.Country='" . $country . "'");
+
+
+
+
+//    printAthlete_Medal($result);
     OCICommit($db_conn);
 }
 

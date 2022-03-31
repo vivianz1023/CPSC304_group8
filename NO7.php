@@ -1,20 +1,34 @@
 <html>
 <head>
-    <title>CPSC 304 PHP/Oracle Demonstration</title>
+    <title>Athlete Information</title>
+    <style>
+        body {
+            background-image: url("mainBG.png");
+            background-repeat: no-repeat, repeat;
+            margin: 30px 30px;
+        }
+        p {font-family:Gill Sans; font-size:20px;}
+    </style>
+
 </head>
 
 <body>
+<b style="font-family:cursive; font-size:60px">Sponsor Information</b>
+<br /><br /><br />
+<b style="font-family:Gill Sans; font-size:20px;">Hi, visitor! Get to know the Sponsor's information!</b>
+<br /><br />
+
 
 <h2>Find the Maximum Amount of Money with the Sponsoring Company</h2>
 <form method="POST" action="NO7.php">
     <input type="hidden" id="AggregationQueryRequest" name="AggregationQueryRequest">
 
-    <input type="submit" value="Find" name="aggregationSubmit"></p>
+    <input style="font-family:Gill Sans; font-size:20px;" type="submit" value="Find" name="aggregationSubmit"></p>
 </form>
 
-<p>Back to Home, please press:&nbsp;
+<p>
     <a href="https://www.students.cs.ubc.ca/~lzy0606/mainPage.php">
-        <button style="font-family:Gill Sans; font-size:18px;">Home</button>
+        <button style="font-family:Gill Sans; font-size:18px;">Back</button>
     </a>
 </p>
 
@@ -95,16 +109,15 @@ See the sample code below for how this function is used */
 }
 
 function printSponsorMaxCost($result) {
-    echo "<br> Max Amount of Money Spend by a Sponsor Company: <br>";
+    echo "<br> <br>";
+    echo "<p style='font-size: 20px; font-family:Gill Sans;background-color:lightskyblue;border: 2px solid #ddd; padding: 6px;line-height:40px; display:inline-block;'>Max Amount of Money Spend by a Sponsor Company</p>";
     echo "<table>";
     echo "<tr>
-          <th>Amount</th> 
+          <th><p style='font-size: 18px; font-family:Gill Sans;'>Amount</p></th>
           <tr>";
 
     While ($row = OCI_Fetch_Array($result, OCI_BOTH)) {
-        echo "<tr><td>" . $row[0] . "</td></tr>";
-//        echo "<tr><td>" . $row[0] . "</td>
-//                  <td>" . $row[1] . "</td></tr>";
+        echo "<tr><td><p style ='font:18px Gill Sans;font-size:20px;'>" . $row[0] . "</p></td></tr>";
 
     }
 
