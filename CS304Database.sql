@@ -201,7 +201,7 @@ CREATE TABLE Monitor
 INSERT INTO SinNumOrEqual_Name VALUES ('000000000', 'Alice');  
 INSERT INTO SinNumOrEqual_Name VALUES ('001001001', 'Bob');  
 INSERT INTO SinNumOrEqual_Name VALUES ('00200200202', 'Cara');  
-INSERT INTO SinNumOrEqual_Name VALUES ('41010519921023033X', 'Dylan');  
+INSERT INTO SinNumOrEqual_Name VALUES ('003003003', 'Dylan');  
 INSERT INTO SinNumOrEqual_Name VALUES ('004004004', 'Ellen');  
 INSERT INTO SinNumOrEqual_Name VALUES ('005005005', 'Fliny');  
 INSERT INTO SinNumOrEqual_Name VALUES ('006006006', 'Gina');  
@@ -218,9 +218,9 @@ INSERT INTO SponsoringCompany VALUES ('Dow');
 
 INSERT INTO OlympicTeamMember_Sponsor VALUES ('a0000', 'America', '000000000', 21, 'F', 1000000, 'RBC');  
 INSERT INTO OlympicTeamMember_Sponsor VALUES ('a0001', 'Canada', '001001001', 18, 'M', 500000, 'FDM');  
-INSERT INTO OlympicTeamMember_Sponsor VALUES ('a0002', 'Russia', '00200200202', 17, 'F', 1000000, 'Intel');  
+INSERT INTO OlympicTeamMember_Sponsor VALUES ('a0002', 'China', '00200200202', 17, 'F', 1000000, 'Intel');  
 INSERT INTO OlympicTeamMember_Sponsor VALUES ('a0003', 'China', '003003003', 22, 'M', 2000000, 'Toyota');  
-INSERT INTO OlympicTeamMember_Sponsor VALUES ('a0004', 'Australia', '004004004', 25, 'M', 1000000, 'Dow');  
+INSERT INTO OlympicTeamMember_Sponsor VALUES ('a0004', 'America', '004004004', 25, 'M', 1000000, 'Dow'); 
 INSERT INTO OlympicTeamMember_Sponsor VALUES ('co0000', 'Canada', '005005005', 26, 'F', NULL, NULL);  
 INSERT INTO OlympicTeamMember_Sponsor VALUES ('co0001', 'Canada', '006006006', 27, 'F', NULL, NULL);  
 INSERT INTO OlympicTeamMember_Sponsor VALUES ('co0002', 'Canada', '007007007', 31, 'F', NULL, NULL);  
@@ -233,11 +233,11 @@ INSERT INTO Name_WorldRecord VALUES ('Speed skating Men''s 500 metres', '34.32')
 INSERT INTO Name_WorldRecord VALUES ('Speed skating Women''s team pursuit', '2:53.44');  
 INSERT INTO Name_WorldRecord VALUES ('Speed skating Men''s 1500 metres', '1:43.21');  
 
-INSERT INTO CompetitionEvent VALUES ('ce0000', 'Figure skating team event Pairs Short program', 40, DATE '2022-02-07', DATE '2022-02-09');  
+INSERT INTO CompetitionEvent VALUES ('ce0000', 'Figure skating team event Pairs Short program g1', 40, DATE '2022-02-07', DATE '2022-02-09');  
 INSERT INTO CompetitionEvent VALUES ('ce0005', 'Short track speed skating Women''s 500 metres', 8, DATE '2022-02-12', DATE '2022-02-14');  
 INSERT INTO CompetitionEvent VALUES ('ce0010', 'Speed skating Men''s 500 metres', 8, DATE '2022-02-16', DATE '2022-02-18');  
 INSERT INTO CompetitionEvent VALUES ('ce0015', 'Speed skating Women''s team pursuit', 30, DATE '2022-02-18', DATE '2022-02-19');  
-INSERT INTO CompetitionEvent VALUES ('ce0001', 'Figure skating team event Pairs Short program', 40, DATE '2022-02-09', DATE '2022-02-09');  
+INSERT INTO CompetitionEvent VALUES ('ce0001', 'Figure skating team event Pairs Short program g2', 40, DATE '2022-02-09', DATE '2022-02-09');  
 
 INSERT INTO Coach VALUES ('co0000', 'Figure skating', INTERVAL '7-0' YEAR TO MONTH);  
 INSERT INTO Coach VALUES ('co0001', 'Short track speed skating', INTERVAL '6-0' YEAR TO MONTH);  
@@ -308,7 +308,7 @@ INSERT INTO LivePlatform VALUES ('CCTV', 'Chinese');
 INSERT INTO Streaming VALUES ('BBC', 'ce0000');  
 INSERT INTO Streaming VALUES ('CBC', 'ce0005');  
 INSERT INTO Streaming VALUES ('Fuji TV', 'ce0010');  
-INSERT INTO Streaming VALUES ('BBC', 'ce0015');  
+INSERT INTO Streaming VALUES ('BBC', 'ce0005');  
 INSERT INTO Streaming VALUES ('CCTV', 'ce0001');  
 INSERT INTO Streaming VALUES ('Fuji TV', 'ce0000');    
 INSERT INTO Streaming VALUES ('Fuji TV', 'ce0005');  
@@ -338,5 +338,4 @@ INSERT INTO Monitor VALUES ('a0001', 'ce0010', 'r0001');
 INSERT INTO Monitor VALUES ('a0002', 'ce0015', 'r0002');  
 INSERT INTO Monitor VALUES ('a0003', 'ce0000', 'r0003');  
 INSERT INTO Monitor VALUES ('a0004', 'ce0001', 'r0004');  
-
 
