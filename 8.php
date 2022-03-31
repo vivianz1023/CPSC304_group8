@@ -22,6 +22,12 @@
             <input type="hidden" id="NestQueryRequest" name="NestQueryRequest">
             <input type="submit" name="NestSubmit"></p>
         </form>
+	
+	 <p>Back to Home, please press:&nbsp;
+    <a href="https://www.students.cs.ubc.ca/~lzy0606/mainPage.php">
+        <button style="font-family:Gill Sans; font-size:18px;">Home</button>
+    </a>
+     </p>
 
         <?php
 		//this tells the system that it's no longer just parsing html; it's now parsing PHP
