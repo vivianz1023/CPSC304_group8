@@ -47,6 +47,12 @@
                 <button style="font-family:Gill Sans; font-size:18px;">Sponsor</button>
             </a>
         </p>
+        
+         <p>Find Extra information , please press:&nbsp;
+            <a href="https://www.students.cs.ubc.ca/~xnie0204/8.php">
+                <button style="font-family:Gill Sans; font-size:18px;">Sponsor</button>
+            </a>
+        </p>
 
     </body>
 
