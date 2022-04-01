@@ -51,9 +51,9 @@ CREATE TABLE Coach
 CREATE TABLE Athlete
 (
     ID           CHAR(20) NOT NULL PRIMARY KEY,
-    BronzeNumber INTEGER CHECK (BronzeNumber >= 0),
-    SilverNumber INTEGER CHECK (SilverNumber >= 0),
     GoldNumber   INTEGER CHECK (GoldNumber >= 0),
+    SilverNumber INTEGER CHECK (SilverNumber >= 0),
+    BronzeNumber INTEGER CHECK (BronzeNumber >= 0),
     FOREIGN KEY (ID) REFERENCES OlympicTeamMember_Sponsor (ID)
         ON DELETE CASCADE
 );
@@ -245,11 +245,11 @@ INSERT INTO Coach VALUES ('co0002', 'Speed skating', INTERVAL '3-4' YEAR TO MONT
 INSERT INTO Coach VALUES ('co0003', 'Figure skating', NULL);  
 INSERT INTO Coach VALUES ('co0004', 'Short track speed skating', NULL);  
 
-INSERT INTO Athlete VALUES ('a0000', 1, 0, 2);  
-INSERT INTO Athlete VALUES ('a0001', 0, 2, 1);  
+INSERT INTO Athlete VALUES ('a0000', 2, 0, 1);  
+INSERT INTO Athlete VALUES ('a0001', 1, 2, 0);  
 INSERT INTO Athlete VALUES ('a0002', 0, 0, 0);  
 INSERT INTO Athlete VALUES ('a0003', 0, 1, 0);  
-INSERT INTO Athlete VALUES ('a0004', 1, 0, 0);  
+INSERT INTO Athlete VALUES ('a0004', 0, 0, 1);  
 
 INSERT INTO Insurance_Provide VALUES ('Manulife Financial Corporation', 100000, 'a0000');  
 INSERT INTO Insurance_Provide VALUES ('Canada Life Assurance Company', 100000, 'a0000');  
