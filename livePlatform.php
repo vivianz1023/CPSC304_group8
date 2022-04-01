@@ -171,7 +171,7 @@
                                   WHERE  Language = '" . $chosenLg . "'");
 
         if (OCI_Fetch_Array($check, OCI_BOTH)[0] == NULL){
-            echo "<font color='red' face='Bradley Hand' size='5'><br />&nbsp; Warning: No such live platforms. Please try again.</font>";
+            echo "<font color='red' face='Bradley Hand' size='5'><br />&nbsp; Warning: No such languages. Please try again.</font>";
         } else {
 
         $plan = "SELECT  CompetitionEvent_Name 
